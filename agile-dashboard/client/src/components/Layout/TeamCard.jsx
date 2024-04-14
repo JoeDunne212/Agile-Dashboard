@@ -1,13 +1,17 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 const TeamCard = (props) =>  {
   
-  const navHandler = () => {
-    props.navHandler(props.name);
+  const navigate = useNavigate();
+  
+  const navigationHandler = () => {
+    let teamName = props.name.replace(/ /g,'');
+    console.log(`${teamName}/`);
+    navigate(`${teamName}/`);
   }
   
   return (
-    <button onClick={navHandler}>
+    <button onClick={navigationHandler}>
       <div className="max-w-sm rounded overflow-hidden shadow-lg m-5">
       <img className="object-cover mx-auto" src={props.url} alt={props.name ? props.name : ''}/>
       <div className="px-6 py-4">

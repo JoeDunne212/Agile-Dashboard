@@ -69,8 +69,8 @@ const BugTypeBarGraph = ({ data }) => {
   }, [graphData]); // Redraw chart if data changes
 
   return (
-    <div>
-      <h2>JIRA Data Graph</h2>
+    <div className='m-10 flex flex-col justify-items-start'>
+      <h2>Issue by Type</h2>
       <div ref={d3Container} />
     </div>
   );
