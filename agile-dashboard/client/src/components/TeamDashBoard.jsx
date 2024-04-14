@@ -17,7 +17,10 @@ const TeamDashboard = (props) => {
                 <div className="p-5">Sprint Metrics<FontAwesomeIcon icon={faChartSimple} className="pl-3" /></div>
                 <div className="p-5">Coverage Metrics<FontAwesomeIcon icon={faPercent} className="pl-3"/></div>
             </div>
+                <div>
+                <div className="m-10 bg-slate-500 rounded-2xl">
                 <BugTypeBarGraph data={example_jira_data}></BugTypeBarGraph>
+                </div>
                 <div>
                     <div className="bg-green-400 m-10 ">1</div>
                     <div className=" bg-red-800 m-10">2</div>
@@ -28,6 +31,7 @@ const TeamDashboard = (props) => {
                     <div className="bg-green-400 m-10">1</div>
                     <div className=" bg-red-800 m-10">2</div>
                     <div className=" bg-orange-500 m-10">3</div>
+                </div>
                 </div>
             </div>
             <Footer></Footer>
