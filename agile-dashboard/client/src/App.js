@@ -8,7 +8,8 @@ import BugTypeBarGraph from './components/BugTypeBarGraph/BugTypeBarGraph';
 import Home from './components/Home/Home';
 import Navbar from './components/NavBar/navbar';
 import Footer from './components/footer.tsx';
-import Hero from './components/Hero/Hero.tsx';
+import Hero from './components/Hero/Hero.jsx';
+import Teams from './pages/Teams.jsx';
 
 // const data = fetch('./test-data-pseudo/example_jira_data.json')
 // .then(res => res).then(data => console.log(data));
@@ -2492,15 +2493,11 @@ function App() {
   console.log(data);
   
   return (
-    <div className="bg-neutral-800 text-white flex flex-col h-screen">
-      <Navbar></Navbar>
-      <body className='flex-1 overflow-auto w-full bg-neutral-600 justify-center align-bottom'>
-        <Hero></Hero>
-        {/* <BugTypeBarGraph data={data}></BugTypeBarGraph> */}
-      </body>
-      <Footer></Footer>
- 
-  </div>
+        <Routes>
+            <Route exact path="" element={<Hero />} />
+            <Route exact path="/help" element={<Help />} />
+            <Route exact path="/teams" element={<Teams />} />
+        </Routes>
   );
 }
 
